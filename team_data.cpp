@@ -108,6 +108,79 @@ namespace NS_DATA {
         seed = theSeed;
     } // SEED
 
+    //getters
+    string team_data::getTeamName() const {
+        return teamName;
+    }
+    int team_data::getTeamRank() const {
+        return teamRank;
+    }
+    string team_data::getConference() const {
+        return conference;
+    } // CONF
+    int team_data::getGamesPlayed() const {
+        return gamesPlayed;
+    } // G
+    int team_data::getGamesWon() const {
+        return gamesWon;
+    } // W
+    double team_data::getAdjustedOffensiveFreq() const {
+        return adjustedOffensiveFreq;
+    }// ADJOE
+    double team_data::getAdjustedDefensiveFreq() const {
+        return adjustedDefensiveFreq;
+    } // ADJDE
+    double team_data::getPowerRating() const {
+        return powerRating;
+    }// BARTHAG
+    double team_data::getEffectiveFieldGoal() const {
+        return effectiveFieldGoal;
+    } // EFG_O
+    double team_data::getEffectiveFieldGoal_D() const {
+        return effectiveFieldGoal_D;
+    } // EFG_D
+    double team_data::getTurnover() const {
+        return turnover;
+    } // TOR
+    double team_data::getTurnover_D() const {
+        return turnover_D;
+    } // TORD
+    double team_data::getRebound() const {
+        return rebound;
+    } // ORB
+    double team_data::getRebound_D() const {
+        return rebound_D;
+    }// DRB
+    double team_data::getFreeThrowRate() const {
+        return freeThrowRate;
+    } // FTR
+    double team_data::getFreeThrowRate_D() const {
+        return freeThrowRate_D;
+    } // FTRD
+    double team_data::getTwoPoint() const {
+        return twoPoint;
+    } // 2P_O
+    double team_data::getTwoPoint_D() const {
+        return twoPoint_D;
+    } // 2P_D
+    double team_data::getThreePoint() const {
+        return threePoint;
+    } // 3P_O
+    double team_data::getThreePoint_D() const {
+        return threePoint_D;
+    } // 3P_D
+    double team_data::getAdjustedTempo() const {
+        return adjustedTempo;
+    }// ADJ_T
+    double team_data::getWinsAboveBubble() const {
+        return winsAboveBubble;
+    } // WAB
+    string team_data::getPostseason() const {
+        return postseason;
+    } // POSTSEASON
+    int team_data::getSeed() const {
+        return seed;
+    } // SEED
 
 
 }

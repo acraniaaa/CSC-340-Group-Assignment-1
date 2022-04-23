@@ -53,3 +53,8 @@
 /.idea/inspectionProfiles/Project_Default.xml
 /cmake-build-debug/.cmake/api/v1/reply/target-CSC_340_Group_Assignment_1-Debug-65771dbb3862ed21f3c4.json
 /cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-aa3c9cbd49ae913ebafc.json
+/cmake-build-debug/.ninja_deps
+/cmake-build-debug/.ninja_log
+/cmake-build-debug/CSC_340_Group_Assignment_1.exe
+/cmake-build-debug/CMakeFiles/CSC_340_Group_Assignment_1.dir/main.cpp.obj
+/cmake-build-debug/CMakeFiles/CSC_340_Group_Assignment_1.dir/team_data.cpp.obj
