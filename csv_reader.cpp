@@ -7,6 +7,7 @@
 namespace NS_READER {
     using namespace NS_DATA;
 
+    //reads team data from a csv file with path given by fileName, initializes a team_data object for each line
     void readFromCSV(const std::string &fileName, std::vector<team_data> &teamList) {
         ifstream inputFileStream;
         string teamString;
@@ -37,12 +38,14 @@ namespace NS_READER {
         inputFileStream.close();
     }
 
+    //reads team data from a string, initializes the result as a team_data object to add to teamList
     team_data createTeam(string& teamString, const int teamNum) {
-        int currentPos = 0;
+        int currentPos = 0; //current position in teamString
         string seed;
 
         team_data team;
 
+        //next comma in teamString, to effectively use commas as a delimiter
         auto newPos = teamString.find(',', currentPos);
         team.setTeamName(teamString.substr(currentPos, newPos));
         team.setTeamRank(teamNum);
@@ -137,7 +140,7 @@ namespace NS_READER {
             team.setSeed(stoi(seed)); // SEED
         }
         else {
-            team.setSeed(0);
+            team.setSeed(0); //if team does not have a seed, set to 0
         }
 
         return team;
