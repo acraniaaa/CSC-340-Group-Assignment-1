@@ -1,5 +1,5 @@
 //
-// Created by javi&hetgar on 2022/04/21.
+// Created by javi & hetgar on 2022/04/21.
 //
 #ifndef CSC_340_GROUP_ASSIGNMENT_1_MAIN_PROJECT2_H
 #define CSC_340_GROUP_ASSIGNMENT_1_MAIN_PROJECT2_H
