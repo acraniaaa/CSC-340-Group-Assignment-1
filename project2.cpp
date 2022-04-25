@@ -28,12 +28,13 @@ namespace NS_READER {
            }
            i++;
         }
-        //account for teams that don't exist by checking the bool statement
+        //account for teams that don't exist by checking the bool statement exists
         if(exists==true){
         Stat=(offense-getMeanAveDefence(team));
        cout<<TeamName<<" had a stat of "<<Stat<<endl;
         return Stat;
     }
+        //if it is false then says the team isn't on the listing
         cout<<TeamName<<" isn't on the listing ";
         return 0;
     }
