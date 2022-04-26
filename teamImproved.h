@@ -4,9 +4,10 @@
 #include "csv_reader.h"
 
 namespace NS_TEAM_IMPROVED {
+	using namespace std;
 
-	string teamImproved(const std::string teamName,const std::vector<team_data> list2017, const std::vector<team_data> list2018);
+	void teamImproved(const string teamName,vector <NS_DATA::team_data> prevYear, vector <NS_DATA::team_data> currYear);
 
 }
 
-#endif#pragma once
+#endif 
