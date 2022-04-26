@@ -14,7 +14,7 @@ int main() {
     std::cout << obj1.getTeamName() << endl;
   
     readFromCSV("Datasets\\cbb18.csv", teamList);
-  //file name was the absolute path for below
+  //file name was the absolute path for above
     
     //testing getting the mean average
     cout<<"mean defense average of "<<getMeanAveDefence(teamList)<<endl;
