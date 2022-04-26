@@ -5,10 +5,10 @@
 namespace NS_TEAM_IMPROVED {
 	
 	void teamImproved(const string teamName,vector <NS_DATA::team_data> prevYear,vector <NS_DATA::team_data> currYear) {
-		int winDiff;
-		double adjODiff;
-		double adjDDiff;
-		int rankDiff;
+		int winDiff = 0;
+		double adjODiff = 0;
+		double adjDDiff = 0;
+		int rankDiff = 0;
 		size_t pos1 = -1;
 		size_t pos2 = -1;
 		string improved = "Team has not improved since 2017!\n";
@@ -29,24 +29,24 @@ namespace NS_TEAM_IMPROVED {
 		if (pos1 == -1|| pos2 == -1) {
 			improved = "Team not found in one or both lists!\n";
 		}
-		else{
-		winDiff = currYear[pos2].getGamesWon() - prevYear[pos1].getGamesWon();
-		adjODiff = currYear[pos2].getAdjustedOffensiveFreq() - prevYear[pos1].getAdjustedOffensiveFreq();
-		adjDDiff = currYear[pos2].getAdjustedDefensiveFreq() - prevYear[pos1].getAdjustedDefensiveFreq();
-		rankDiff = currYear[pos2].getTeamRank() - prevYear[pos1].getTeamRank();
-		}
-		
+		else {
+			winDiff = currYear[pos2].getGamesWon() - prevYear[pos1].getGamesWon();
+			adjODiff = currYear[pos2].getAdjustedOffensiveFreq() - prevYear[pos1].getAdjustedOffensiveFreq();
+			adjDDiff = currYear[pos2].getAdjustedDefensiveFreq() - prevYear[pos1].getAdjustedDefensiveFreq();
+			rankDiff = currYear[pos2].getTeamRank() - prevYear[pos1].getTeamRank();
+		}//end of setting differences between years
+
 		if (winDiff > 0) {
-			improved = "Team has improved from 2017-2018!\n";
+			improved = "Team has improved from 2017-2018!\n";//greater wins
 		}
 		else if (adjODiff > 0) {
-			improved = "Team has improved from 2017-2018!\n";
+			improved = "Team has improved from 2017-2018!\n";//greater offense
 		}
 		else if (adjDDiff > 0) {
-			improved = "Team has improved from 2017-2018!\n";
+			improved = "Team has improved from 2017-2018!\n";//greater defense
 		}
 		else if (rankDiff > 0) {
-			improved = "Team has improved from 2017-2018!\n";
+			improved = "Team has improved from 2017-2018!\n";//greater ranking
 		}
 		
 		cout << improved;
