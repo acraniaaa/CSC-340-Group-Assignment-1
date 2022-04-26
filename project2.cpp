@@ -5,14 +5,6 @@
 #include "project2.h"
 
 namespace NS_READER {
-
-    
-   void display(string teamName,double ADJOE,double ADJDE){
-        cout<<teamName<<endl;
-        cout<<"ADJOE: "<<ADJOE<<endl;
-        cout<<"ADJDE: "<<ADJDE<<endl;
-        cout<<endl;
-    }
     
     double getMeanAveDefence(vector <team_data> team) {
         double def=0;
