@@ -10,15 +10,6 @@
 namespace NS_READER{
     using namespace std;
     
-    class Test{
-        string teamName;
-        double ADJOE;
-        double ADJDE;
-    public:
-        Test();
-        void display(){}
-    };
-    
     //reads the vector  and pulls out the ADJDE then divides it by the size giving you the mean average defense
     double getMeanAveDefence(vector <team_data> team);
     //give it a team name and it will look through the vector to find that teams offense and subtracts it from the mean average defense giving you the team's stat
