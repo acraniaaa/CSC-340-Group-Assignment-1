@@ -6,11 +6,7 @@
 
 namespace NS_READER {
 
-     Test::Test() {
-        teamName="n/a";
-        ADJOE=0;
-        ADJDE=0;
-    }
+    
    void display(string teamName,double ADJOE,double ADJDE){
         cout<<teamName<<endl;
         cout<<"ADJOE: "<<ADJOE<<endl;
