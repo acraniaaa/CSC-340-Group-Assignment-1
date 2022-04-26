@@ -29,11 +29,13 @@ namespace NS_TEAM_IMPROVED {
 		if (pos1 == -1|| pos2 == -1) {
 			improved = "Team not found in one or both lists!\n";
 		}
+		else{
 		winDiff = currYear[pos2].getGamesWon() - prevYear[pos1].getGamesWon();
 		adjODiff = currYear[pos2].getAdjustedOffensiveFreq() - prevYear[pos1].getAdjustedOffensiveFreq();
 		adjDDiff = currYear[pos2].getAdjustedDefensiveFreq() - prevYear[pos1].getAdjustedDefensiveFreq();
 		rankDiff = currYear[pos2].getTeamRank() - prevYear[pos1].getTeamRank();
-
+		}
+		
 		if (winDiff > 0) {
 			improved = "Team has improved from 2017-2018!\n";
 		}
