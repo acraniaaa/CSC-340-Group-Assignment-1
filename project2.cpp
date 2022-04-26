@@ -6,6 +6,18 @@
 
 namespace NS_READER {
 
+     Test::Test() {
+        teamName="n/a";
+        ADJOE=0;
+        ADJDE=0;
+    }
+   void display(string teamName,double ADJOE,double ADJDE){
+        cout<<teamName<<endl;
+        cout<<"ADJOE: "<<ADJOE<<endl;
+        cout<<"ADJDE: "<<ADJDE<<endl;
+        cout<<endl;
+    }
+    
     double getMeanAveDefence(vector <team_data> team) {
         double def=0;
         int count=team.size();
@@ -31,7 +43,8 @@ namespace NS_READER {
         //account for teams that don't exist by checking the bool statement exists
         if(exists==true){
         Stat=(offense-getMeanAveDefence(team));
-       cout<<TeamName<<" had a stat of "<<Stat<<endl;
+        display(TeamName,team[counter].getAdjustedOffensiveFreq(),team[counter].getAdjustedDefensiveFreq());
+        cout<<TeamName<<" had a stat of "<<Stat<<endl;
         return Stat;
     }
         //if it is false then says the team isn't on the listing
