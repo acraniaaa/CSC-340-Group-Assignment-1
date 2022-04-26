@@ -31,8 +31,7 @@ namespace NS_READER {
         //account for teams that don't exist by checking the bool statement exists
         if(exists==true){
         Stat=(offense-getMeanAveDefence(team));
-        display(TeamName,team[counter].getAdjustedOffensiveFreq(),team[counter].getAdjustedDefensiveFreq());
-        cout<<TeamName<<" had a stat of "<<Stat<<endl;
+         cout<<TeamName<<" had a stat of "<<Stat<<endl;
         return Stat;
     }
         //if it is false then says the team isn't on the listing
