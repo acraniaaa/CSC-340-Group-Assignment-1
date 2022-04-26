@@ -1,17 +1,20 @@
 //
-// Created by Owen Bratt on 4/24/2022.
+// Created by ivanr on 4/25/2022.
 //
 
-#include "csv_reader.h"
+#include "yearlyTeamData.h"
 
-namespace NS_READER {
-    using namespace NS_DATA;
+namespace NS_YEARLYDATA {
+    using namespace std;
+    yearlyTeamData::yearlyTeamData() {}
+    yearlyTeamData::yearlyTeamData(const std::string &fileName) {
+        readFromCSV(fileName);
+    }
 
-    //reads team data from a csv file with path given by fileName, initializes a team_data object for each line
-    void readFromCSV(const std::string &fileName, std::vector<team_data> &teamList) {
+    void yearlyTeamData::readFromCSV(const std::string &fileName) {
         ifstream inputFileStream;
         string teamString;
-        team_data currentTeam;
+        NS_DATA::teamData currentTeam;
 
 
 
@@ -24,9 +27,9 @@ namespace NS_READER {
         getline(inputFileStream, teamString); //disregard first line (title line)
         getline(inputFileStream, teamString); //prepare initial teamString
         for (int teamNum = 1; !inputFileStream.fail(); teamNum++) {
-            currentTeam = createTeam(teamString, teamNum);
+            currentTeam = yearlyTeamData::createTeam(teamString, teamNum);
 
-            teamList.push_back(currentTeam);
+            yearlyData.push_back(currentTeam);
 
             getline(inputFileStream, teamString);
         }
@@ -39,11 +42,11 @@ namespace NS_READER {
     }
 
     //reads team data from a string, initializes the result as a team_data object to add to teamList
-    team_data createTeam(string& teamString, const int teamNum) {
-        int currentPos = 0; //current position in teamString
+    NS_DATA::teamData yearlyTeamData::createTeam(string& teamString, const int teamNum) {
+        unsigned long currentPos = 0; //current position in teamString
         string seed;
 
-        team_data team;
+        NS_DATA::teamData team;
 
         //next comma in teamString, to effectively use commas as a delimiter
         auto newPos = teamString.find(',', currentPos);
@@ -145,4 +148,41 @@ namespace NS_READER {
 
         return team;
     }
+    double yearlyTeamData::getMeanAveDefence() {
+        double def=0;
+        int count=yearlyData.size();
+        for(int i=0; i<yearlyData.size();i++){
+            //uses the functions in team_data to find the adjustedDefensiveFreq of the team vector
+            def+=yearlyData[i].getAdjustedDefensiveFreq();
+        }
+        return (def/count);
+    }
+//gets offensive data of a chosen team
+    double yearlyTeamData::getTeamStatRating(string& TeamName) {
+        double offense=0;
+        bool exists=false;
+        double Stat;
+
+        for(int i=0; i<yearlyData.size();i++){
+            if(TeamName==yearlyData[i].getTeamName()){
+                offense+=yearlyData[i].getAdjustedOffensiveFreq();
+                exists=true;
+            }
+            i++;
+        }
+        //account for teams that don't exist by checking the bool statement exists
+        if(exists){
+            Stat=(offense-getMeanAveDefence());
+            cout<<TeamName<<" had a stat of "<<Stat<<endl;
+            return Stat;
+        }
+        //if it is false then says the team isn't on the listing
+        cout<<TeamName<<" isn't on the listing ";
+        return 0;
+    }
+
+    std::vector<NS_DATA::teamData> yearlyTeamData::getYearlyData() const {
+        return yearlyData;
+    }
+
 }

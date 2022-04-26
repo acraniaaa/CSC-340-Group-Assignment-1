@@ -2,16 +2,16 @@
 // Created by ivanr on 4/20/2022.
 //
 
-#ifndef CSC_340_GROUP_ASSIGNMENT_1_TEAM_DATA_H
-#define CSC_340_GROUP_ASSIGNMENT_1_TEAM_DATA_H
+#ifndef CSC_340_GROUP_ASSIGNMENT_1_TEAMDATA_H
+#define CSC_340_GROUP_ASSIGNMENT_1_TEAMDATA_H
 #include <string>
 #include <iostream>
 
 namespace NS_DATA {
     using namespace std;
-    class team_data {
+    class teamData {
     public:
-        team_data(); // default constructor
+        teamData(); // default constructor
         //setters
         void setTeamName(string name);
         void setTeamRank(int rank);
@@ -95,4 +95,4 @@ namespace NS_DATA {
 }
 
 
-#endif //CSC_340_GROUP_ASSIGNMENT_1_TEAM_DATA_H
+#endif //CSC_340_GROUP_ASSIGNMENT_1_TEAMDATA_H

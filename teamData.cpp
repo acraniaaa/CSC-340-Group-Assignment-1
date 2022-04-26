@@ -2,12 +2,12 @@
 // Created by ivanr on 4/20/2022.
 //
 
-#include "team_data.h"
+#include "teamData.h"
 
 namespace NS_DATA {
     //default constructor; no need to create parameterized constructor;
     // file input will create objects with default constructor and use setters to assign values.
-    team_data::team_data() {
+    teamData::teamData() {
         teamName = "n/a"; // TEAM
         teamRank = -1; // rank should be set according to the order
         // in which the team data is received in the input file.
@@ -35,150 +35,150 @@ namespace NS_DATA {
         seed = -1; // SEED
     }
     //setters
-    void team_data::setTeamName(string name) {
+    void teamData::setTeamName(string name) {
         teamName = name;
     }
-    void team_data::setTeamRank(int rank) {
+    void teamData::setTeamRank(int rank) {
         teamRank = rank;
     }
-    void team_data::setConference(string conf){
+    void teamData::setConference(string conf){
         conference = conf;
     } // CONF
-    void team_data::setGamesPlayed(int theGamesPlayed) {
+    void teamData::setGamesPlayed(int theGamesPlayed) {
         gamesPlayed = theGamesPlayed;
     } // G
-    void team_data::setGamesWon(int theGamesWon) {
+    void teamData::setGamesWon(int theGamesWon) {
         gamesWon = theGamesWon;
     } // W
-    void team_data::setAdjustedOffensiveFreq(double value) {
+    void teamData::setAdjustedOffensiveFreq(double value) {
         adjustedOffensiveFreq = value;
     }// ADJOE
-    void team_data::setAdjustedDefensiveFreq(double value) {
+    void teamData::setAdjustedDefensiveFreq(double value) {
         adjustedDefensiveFreq = value;
     }// ADJDE
-    void team_data::setPowerRating(double value) {
+    void teamData::setPowerRating(double value) {
         powerRating = value;
     } // BARTHAG
-    void team_data::setEffectiveFieldGoal(double value) {
+    void teamData::setEffectiveFieldGoal(double value) {
         effectiveFieldGoal = value;
     } // EFG_O
-    void team_data::setEffectiveFieldGoal_D(double value) {
+    void teamData::setEffectiveFieldGoal_D(double value) {
         effectiveFieldGoal_D = value;
     } // EFG_D
-    void team_data::setTurnover(double value) {
+    void teamData::setTurnover(double value) {
         turnover = value;
     } // TOR
-    void team_data::setTurnover_D(double value) {
+    void teamData::setTurnover_D(double value) {
         turnover_D = value;
     } // TORD
-    void team_data::setRebound(double value) {
+    void teamData::setRebound(double value) {
         rebound = value;
     } // ORB
-    void team_data::setRebound_D(double value) {
+    void teamData::setRebound_D(double value) {
         rebound_D = value;
     } // DRB
-    void team_data::setFreeThrowRate(double value) {
+    void teamData::setFreeThrowRate(double value) {
         freeThrowRate = value;
     }// FTR
-    void team_data::setFreeThrowRate_D(double value) {
+    void teamData::setFreeThrowRate_D(double value) {
         freeThrowRate_D = value;
     } // FTRD
-    void team_data::setTwoPoint(double value) {
+    void teamData::setTwoPoint(double value) {
         twoPoint = value;
     } // 2P_O
-    void team_data::setTwoPoint_D(double value) {
+    void teamData::setTwoPoint_D(double value) {
         twoPoint_D = value;
     } // 2P_D
-    void team_data::setThreePoint(double value) {
+    void teamData::setThreePoint(double value) {
         threePoint = value;
     }// 3P_O
-    void team_data::setThreePoint_D(double value) {
+    void teamData::setThreePoint_D(double value) {
         threePoint_D = value;
     } // 3P_D
-    void team_data::setAdjustedTempo(double value) {
+    void teamData::setAdjustedTempo(double value) {
         adjustedTempo = value;
     } // ADJ_T
-    void team_data::setWinsAboveBubble(double value) {
+    void teamData::setWinsAboveBubble(double value) {
         winsAboveBubble = value;
     }// WAB
-    void team_data::setPostseason(string thePostseason) {
+    void teamData::setPostseason(string thePostseason) {
         postseason = thePostseason;
     }// POSTSEASON
-    void team_data::setSeed(int theSeed) {
+    void teamData::setSeed(int theSeed) {
         seed = theSeed;
     } // SEED
 
     //getters
-    string team_data::getTeamName() const {
+    string teamData::getTeamName() const {
         return teamName;
     }
-    int team_data::getTeamRank() const {
+    int teamData::getTeamRank() const {
         return teamRank;
     }
-    string team_data::getConference() const {
+    string teamData::getConference() const {
         return conference;
     } // CONF
-    int team_data::getGamesPlayed() const {
+    int teamData::getGamesPlayed() const {
         return gamesPlayed;
     } // G
-    int team_data::getGamesWon() const {
+    int teamData::getGamesWon() const {
         return gamesWon;
     } // W
-    double team_data::getAdjustedOffensiveFreq() const {
+    double teamData::getAdjustedOffensiveFreq() const {
         return adjustedOffensiveFreq;
     }// ADJOE
-    double team_data::getAdjustedDefensiveFreq() const {
+    double teamData::getAdjustedDefensiveFreq() const {
         return adjustedDefensiveFreq;
     } // ADJDE
-    double team_data::getPowerRating() const {
+    double teamData::getPowerRating() const {
         return powerRating;
     }// BARTHAG
-    double team_data::getEffectiveFieldGoal() const {
+    double teamData::getEffectiveFieldGoal() const {
         return effectiveFieldGoal;
     } // EFG_O
-    double team_data::getEffectiveFieldGoal_D() const {
+    double teamData::getEffectiveFieldGoal_D() const {
         return effectiveFieldGoal_D;
     } // EFG_D
-    double team_data::getTurnover() const {
+    double teamData::getTurnover() const {
         return turnover;
     } // TOR
-    double team_data::getTurnover_D() const {
+    double teamData::getTurnover_D() const {
         return turnover_D;
     } // TORD
-    double team_data::getRebound() const {
+    double teamData::getRebound() const {
         return rebound;
     } // ORB
-    double team_data::getRebound_D() const {
+    double teamData::getRebound_D() const {
         return rebound_D;
     }// DRB
-    double team_data::getFreeThrowRate() const {
+    double teamData::getFreeThrowRate() const {
         return freeThrowRate;
     } // FTR
-    double team_data::getFreeThrowRate_D() const {
+    double teamData::getFreeThrowRate_D() const {
         return freeThrowRate_D;
     } // FTRD
-    double team_data::getTwoPoint() const {
+    double teamData::getTwoPoint() const {
         return twoPoint;
     } // 2P_O
-    double team_data::getTwoPoint_D() const {
+    double teamData::getTwoPoint_D() const {
         return twoPoint_D;
     } // 2P_D
-    double team_data::getThreePoint() const {
+    double teamData::getThreePoint() const {
         return threePoint;
     } // 3P_O
-    double team_data::getThreePoint_D() const {
+    double teamData::getThreePoint_D() const {
         return threePoint_D;
     } // 3P_D
-    double team_data::getAdjustedTempo() const {
+    double teamData::getAdjustedTempo() const {
         return adjustedTempo;
     }// ADJ_T
-    double team_data::getWinsAboveBubble() const {
+    double teamData::getWinsAboveBubble() const {
         return winsAboveBubble;
     } // WAB
-    string team_data::getPostseason() const {
+    string teamData::getPostseason() const {
         return postseason;
     } // POSTSEASON
-    int team_data::getSeed() const {
+    int teamData::getSeed() const {
         return seed;
     } // SEED
 
